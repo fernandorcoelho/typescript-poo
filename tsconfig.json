@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "lib": ["ES2015", "DOM", "ES2015.Promise"],
+    "moduleDetection": "force",
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "strictNullChecks": true
+  }
+}
