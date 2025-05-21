@@ -1,3 +1,12 @@
+// public =>    A visibilidade padrão dos membros da classe é "public".
+//              Um membro "public" pode ser acessado em qualquer lugar.
+
+// protected => Membros "protected" são visíveis apenas para subclasses da
+//              classe em que são declarados.
+
+// private =>   Não permite  acesso ao membro nem mesmo pelas subclasses.
+//              Somente a própria classe pode acessá-lo.
+
 export class Person {
   private firstName: string;
   lastName: string;
