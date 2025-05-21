@@ -1,24 +1,31 @@
-// public =>    A visibilidade padrão dos membros da classe é "public".
-//              Um membro "public" pode ser acessado em qualquer lugar.
-
-// protected => Membros "protected" são visíveis apenas para subclasses da
-//              classe em que são declarados.
-
-// private =>   Não permite  acesso ao membro nem mesmo pelas subclasses.
-//              Somente a própria classe pode acessá-lo.
+// Getters and Setters (get e set)
+// Note que um par get/set apoiado por campo sem lógica extra raramente é útil
+// em JavaScript. Não tem problema expor campos públicos se você não precisar
+// adicionar lógica adicional durante as operações get/set.
 
 export class Person {
-  private firstName: string;
-  lastName: string;
+  private _firstName: string;
+  public lastName: string;
   birthDate: Date;
 
   constructor(firstName: string, lastName: string, birthDate: Date) {
-    this.firstName = firstName;
+    this._firstName = firstName;
     this.lastName = lastName;
     this.birthDate = birthDate;
   }
 
-  getFullName(): string {
+  get firstName() {
+    // return this.firstName.toUpperCase();
+    return this._firstName;
+  }
+
+  set firstName(name: string) {
+    if (name.length > 0) {
+      this._firstName = name;
+    }
+  }
+
+  get fullName(): string {
     return `${this.firstName} ${this.lastName}`;
   }
 
@@ -39,18 +46,4 @@ export class Person {
     );
   }
 
-  updateFirstName(firstName: string): void {
-    this.firstName = firstName;
-  }
-}
-
-class Player extends Person {
-  constructor(firstName: string, lastName: string, birthDate: Date) {
-    super(firstName, lastName, birthDate);
-  }
-
-  method1() {
-    this.getFullName();
-    this.isBirthdayPassed();
-  }
 }
