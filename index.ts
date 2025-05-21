@@ -1,9 +1,9 @@
-function main() {
-  function teste(name: string) {
-    console.log("Hello, world ", name);
-  }
+import { Person } from "./banking/Person";
 
-  teste('fernando');
+function main() {
+  const maria = new Person("Maria", "da Silva", new Date("1999-01-15"));
+
+  console.log(maria);
 }
 
 main();
