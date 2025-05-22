@@ -1,8 +1,3 @@
-// Getters and Setters (get e set)
-// Note que um par get/set apoiado por campo sem lógica extra raramente é útil
-// em JavaScript. Não tem problema expor campos públicos se você não precisar
-// adicionar lógica adicional durante as operações get/set.
-
 export class Person {
   private _firstName: string;
   public lastName: string;
@@ -45,5 +40,4 @@ export class Person {
         today.getDate() >= this.birthDate.getDate())
     );
   }
-
 }

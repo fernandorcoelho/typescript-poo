@@ -4,7 +4,7 @@ export class CreditCard implements PaymentMethod {
   constructor(
     public cardNumber: string,
     private creditLimit: number,
-    private outstandingBalance: number = 0  // Fatura do cartão
+    private outstandingBalance: number = 0
   ) {}
 
   pay(amount: number): void {
