@@ -17,6 +17,9 @@
 // O contrato é o PaymentMethod.
 // As classes CreditCard e CurrentAccount não estão acopladas a uma terceira classe
 
+// A Interface é outra forma de implementar o conceito de Polimorfismo, pois diferentes objetos respondem à mesma chamada
+// de método de diferentes maneiras.
+
 import { CreditCard } from "./banking/CreditCard";
 import { CurrentAccount } from "./banking/CurrentAccount";
 
