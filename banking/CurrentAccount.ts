@@ -14,9 +14,8 @@ export class CurrentAccount extends BankAccount {
     this.overdraftLimit = overdraftLimit;
   }
 
-  withdraw(amount: number): void {
+  override withdraw(amount: number): void {
     const totalLimit = this._balance + this.overdraftLimit;
-    
     if (amount > 0 && amount <= totalLimit) {
       this._balance -= amount;
       this.logSuccessWithDraw(amount);

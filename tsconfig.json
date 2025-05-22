@@ -8,6 +8,7 @@
     "target": "ES5",
     "module": "CommonJS",
     "outDir": "out",
-    "sourceMap": true
+    "sourceMap": true,
+    "noImplicitOverride": true
   }
 }
